@@ -460,6 +460,12 @@ The extension, in a file name, is the part that follows the last
 
 (defalias 'f-hidden-p 'f-hidden?)
 
+(defun f-not-hidden? (path)
+  "Return nil if PATH is hidden, nil otherwise."
+  (not (f-hidden? path)))
+
+(defalias 'f-not-hidden-p 'f-not-hidden?)
+
 (defun f-empty? (path)
   "If PATH is a file, return t if the file in PATH is empty, nil otherwise.
 If PATH is directory, return t if directory has no files, nil otherwise."
