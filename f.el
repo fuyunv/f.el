@@ -286,7 +286,7 @@ If FORCE is t, a directory will be deleted recursively."
 
 (defun f-symlink (source path)
   "Create a symlink to SOURCE from PATH."
-  (f--destructive path (make-symbolic-link source path)))
+  (f--destructive path (make-symbolic-link (f-full source) path)))
 
 (defun f-move (from to)
   "Move or rename FROM to TO.
